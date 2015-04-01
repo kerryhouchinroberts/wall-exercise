@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150401172109) do
+ActiveRecord::Schema.define(version: 20150401193328) do
 
   create_table "posts", force: :cascade do |t|
-    t.string "status"
-    t.string "name"
+    t.string  "status"
+    t.string  "name"
+    t.integer "likes"
   end
 
 end
