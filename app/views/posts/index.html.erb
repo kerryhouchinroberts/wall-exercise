@@ -1,0 +1,17 @@
+<h1>Leave a Message</h1>
+
+<% if flash[:notice] %>
+  <div><%= flash[:notice] %></div>
+<% end %>
+
+  <%= form_for(@post, remote: true) do |f| %>
+  <%= f.label :status %>
+  <%= f.text_area :status %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+  <% end %>
+
+  <ul id="posts">
+    <%= render @posts %>
+  </ul>
