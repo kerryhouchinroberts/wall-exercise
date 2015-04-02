@@ -23,8 +23,7 @@ class PostsController < ApplicationController
 
   def like
     @post = Post.find(params[:id])
-    @post.likes += 1
-    @post.save
+    @like = @post.increment!(:likes)
 
     respond_to do |format|
       format.js {}
